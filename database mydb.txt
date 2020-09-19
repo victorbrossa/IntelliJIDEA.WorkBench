@@ -1,0 +1,18 @@
+USE mydb;
+CREATE TABLE `mydb`.`contact` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(255) NULL,
+  `email` VARCHAR(255) NULL,
+  `phone` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+  ALTER TABLE `mydb`.`contact`
+  CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT,
+  ADD UNIQUE INDEX `id_UNIQUE` (`id` ASC);
+
+INSERT INTO contact ( name, email, phone) VALUES 
+("Maria", "aula@java.com", "987456123"),
+("João", "joao@java.com", "987746123"),
+("Ana", "java@sprin.com", "987456555");
+
+
